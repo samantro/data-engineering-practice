@@ -1,8 +1,8 @@
 # Write your MySQL query statement below
 with cte as ( 
     select num, 
-    lead(num) over () as l1, 
-    lag(num) over () as l2
+    lead(num) over (order by id) as l1, 
+    lag(num) over (order by id) as l2
     from logs
 )
 
