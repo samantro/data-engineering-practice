@@ -2,8 +2,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 <!---LeetCode Topics Start-->
 # LeetCode Topics
 ## Database
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0176-second-highest-salary](https://github.com/samantro/data-engineering-practice/tree/master/0176-second-highest-salary) |
 | [0177-nth-highest-salary](https://github.com/samantro/data-engineering-practice/tree/master/0177-nth-highest-salary) |
 | [0178-rank-scores](https://github.com/samantro/data-engineering-practice/tree/master/0178-rank-scores) |
