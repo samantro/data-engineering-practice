@@ -1,13 +1,11 @@
 # Write your MySQL query statement below
 with cte as (
-    select salary, departmentId, name, 
-    rank() over (partition by departmentId order by salary desc ) as r
+    select max(salary) as s, id, departmentId
     from employee
+    group by departmentId
 )
 
--- select * from cte;
-select d.name as Department, c.name as Employee,  Salary
-from department d
-left join cte c
-on c.departmentId = d.id
-where r = 1;
+select d.name as Department,e.name as Employee, s as salary
+from cte c
+left join Employee e on c.departmentId = e.departmentId and  c.s = e.salary
+left join Department d on c.departmentId = d.id;
